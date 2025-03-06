@@ -7,6 +7,41 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Proyecto Backend Laravel
+
+Este proyecto es una API backend construida con **Laravel**. A continuación, se describen los pasos para configurar el proyecto correctamente, incluyendo la restauración de la base de datos, la configuración de **Sanctum** para la autenticación y la activación de **storage:link** para manejar archivos de imagen.
+
+## 1. Clonar el Proyecto
+
+Primero, clona este repositorio en tu máquina local:
+
+```bash
+git clone https://github.com/JManuelSosa/bakendCrud-Parcial2.git
+
+Accede al directorio del proyecto:
+cd bakendCrud-Parcial2
+
+Copia el archivo .env.example a .env:
+cp .env.example .env
+
+Luego, abre el archivo .env y ajusta las configuraciones de la base de datos según tu entorno (usuario, contraseña, nombre de la base de datos, etc.):
+
+bash:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_base_de_datos
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+
+Instala las dependencias del proyecto:
+composer install
+
+Este proyecto incluye un archivo de respaldo de base de datos ubicado en la carpeta db-backups. Para restaurar la base de datos desde el archivo api_parcial2.sql
+
+Activar el enlace simbólico a la carpeta storage para servir las fotografías:
+php artisan storage:link
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
